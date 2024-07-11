@@ -110,7 +110,7 @@ systemctl start rc-local
 
 gen_proxy_file_for_user
 
-rm -rf /root/setup.sh
+rm -rf /root/proxynopass.sh
 rm -rf /root/3proxy-0.8.13
 
 echo "Starting Proxy"
