@@ -134,6 +134,17 @@ then
 	IPV6ADDR=2403:6a40:2:9100::$IPD:0000/56
 	IPV6_DEFAULTGW=2403:6a40:2:9100::1
 	EOF
+elif [ $IPC == 89 ]
+then
+   tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 <<-EOF
+	IPV6INIT=yes
+	IPV6_AUTOCONF=no
+	IPV6_DEFROUTE=yes
+	IPV6_FAILURE_FATAL=no
+	IPV6_ADDR_GEN_MODE=stable-privacy
+	IPV6ADDR=2403:6a40:2:8900::$IPD:0000/56
+	IPV6_DEFAULTGW=2403:6a40:2:8900::1
+	EOF
 else
   echo 'KHONG THANH CONG!'
 fi
